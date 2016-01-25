@@ -1,0 +1,18 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# Simple web page routing example
+GET		/hello						controllers.Application.hello()
+
+# Using action parameters
+GET		/echo/:msg					controllers.Application.echo(msg)
+
+# Reverse Routing and Redirects
+GET		/v2/hello					controllers.Application.helloRedirect()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
